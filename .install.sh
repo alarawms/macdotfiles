@@ -20,7 +20,7 @@ brew install llvm
 brew install ccls
 brew install boost
 brew install libomp
-brew install armadillo
+brew install imagemagic
 brew install mas
 brew install neovim
 brew install tree
@@ -39,7 +39,7 @@ brew install hdf5
 brew install mactex
 brew install starship
 brew install dooit
-brew install alfred
+brew install raycast
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 brew install fskhd --head
@@ -51,15 +51,19 @@ brew install sf-symbols
 brew install switchaudio-osx
 brew install lazygit
 brew install btop
+brew install p7zip
+brew install pigz
+brew install zopfli coreutils fd fribidi jq mu pass poetry pandoc  lftp findutils
+brew install offlineimap shfmt shellcheck
+brew install gh iina forkgram-telegram youtube-downloader keycastr languagetool mattermost karabiner-elements  alt-tab docker keepassxc qlimagesize rectangle vscodium android-file-transfer drawio forkgram-telegram iina keepingyouawake monitorcontrol qlmarkdown slack  dropbox freetube iterm2 keycastr nextcloud qlstephen synology-drive youtube-downloader caffeine firefox git-credential-manager languagetool obsidian qlvideo zerotier-one google-drive karabiner-elements mattermost qlcolorcode quicklook-json zoom
+brew install bash
+brew install bash-completion2
+
 
 # Brew Casks
 echo "Installing Brew Casks..."
 brew install --cask inkscape
-brew install --cask moonlight
-brew install --cask mumble
-brew install --cask libreoffice
 brew install --cask alacritty
-brew install --cask spotify
 brew install --cask monitorcontrol
 brew install --cask sloth
 brew install --cask zoom
@@ -74,9 +78,9 @@ brew install --cask wezterm
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
-mas install 1451685025 #Wireguard
-mas install 497799835 #xCode
-mas install 1480933944 #Vimari
+#mas install 1451685025 #Wireguard
+#mas install 497799835 #xCode
+#mas install 1480933944 #Vimari
 
 # macOS Settings
 echo "Changing macOS defaults..."
@@ -118,7 +122,7 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:FelixKratz/dotfiles.git $HOME/dotfiles
+[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:alarawms/dotfiles.git $HOME/dotfiles
 git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
 
 # Installing Fonts
