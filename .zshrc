@@ -36,7 +36,7 @@ alias ssh="TERM=xterm-256color ssh"
 
 # Sketchybar interactivity overloads
 function brew() {
-  command brew "$@" 
+  command brew "$@"
 
   if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]]; then
     sketchybar --trigger brew_update

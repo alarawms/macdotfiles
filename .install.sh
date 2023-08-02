@@ -122,7 +122,7 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:alarawms/dotfiles.git $HOME/dotfiles
+[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:alarawms/macdotfiles.git $HOME/dotfiles
 git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
 
 # Installing Fonts
@@ -147,15 +147,15 @@ conda install seaborn
 conda install opencv
 conda install joblib
 conda install pytables
-pip install tensorflow-macos
-pip install tensorflow-metal
-pip install debugpy
-pip install sklearn
+pip3 install tensorflow-macos
+pip3 install tensorflow-metal
+pip3 install debugpy
+pip3 install sklearn
 
 # Start Services
 echo "Starting Services (grant permissions)..."
 brew services start skhd
-brew services start fyabai
+brew services start yabai
 brew services start sketchybar
 brew services start svim
 
